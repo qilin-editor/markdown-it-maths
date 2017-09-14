@@ -1,3 +1,5 @@
+import "katex/dist/katex.min.css";
+
 import parseAsciiMath from "./parser/asciimath";
 import parseKaTeX from "./parser/katex";
 import renderKaTeX from "./renderer/katex";

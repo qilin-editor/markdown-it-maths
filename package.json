@@ -1,7 +1,7 @@
 {
     "name": "markdown-it-maths",
     "main": "dist/index.min.js",
-    "version": "1.0.2",
+    "version": "1.0.4",
     "author": "Łaniewski Bartosz <laniewski.bartozzz@gmail.com> (http://laniewski.me/)",
     "license": "MIT",
     "dependencies": {

@@ -2,7 +2,7 @@ import katex from "katex";
 
 export default function (code, text = "") {
     // Two or more consecutive new lines mean a new formula
-    code.trim().split(/(?:\n\s*){2,}/).forEach((line) => {
+    code.split(/(?:\n\s*){2,}/).forEach((line) => {
         try {
             text += katex.renderToString(line.trim(), { displayMode: true });
         } catch (err) {

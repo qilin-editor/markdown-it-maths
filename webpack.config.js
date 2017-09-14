@@ -7,7 +7,9 @@ const config = {
 
     output: {
         path: path.resolve(__dirname, "./dist"),
-        filename: "index.min.js"
+        filename: "index.min.js",
+        library: "markdown-it-maths",
+        libraryTarget: "umd"
     },
 
     watchOptions: {
@@ -18,7 +20,7 @@ const config = {
     },
 
     context: __dirname,
-    target: "node",
+    target: "web",
 
     module: {
         rules: [

@@ -46,6 +46,16 @@ const config = {
                         "sass-loader"
                     ]
                 })
+            },
+            {
+                test: /\.less$/,
+                use: ExtractTextPlugin.extract({
+                    use: [
+                        "css-loader",
+                        "postcss-loader",
+                        "less-loader"
+                    ]
+                })
             }
         ]
     },

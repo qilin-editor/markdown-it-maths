@@ -9,7 +9,7 @@ function renderToString(code) {
 }
 
 export default function (code, force = false) {
-    if (code.startsWith("katex")) {
+    if (!force && code.startsWith("katex")) {
         return renderToString(code.substr(5, code.length - 2));
     }
 

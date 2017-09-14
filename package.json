@@ -1,7 +1,7 @@
 {
     "name": "markdown-it-maths",
     "main": "dist/index.min.js",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "Łaniewski Bartosz <laniewski.bartozzz@gmail.com> (http://laniewski.me/)",
     "license": "MIT",
     "dependencies": {
@@ -37,7 +37,7 @@
         "node-sass": "^4.5.3"
     },
     "scripts": {
-        "prepare": "npm run clean && npm run build",
+        "prepare": "npm run clear && npm run build",
         "watch": "./node_modules/.bin/webpack --progress --watch",
         "build": "./node_modules/.bin/webpack --progress",
         "clear": "rm -rf ./dist"

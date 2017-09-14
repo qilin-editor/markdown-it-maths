@@ -16,12 +16,16 @@ export default function (md) {
 
     // Fenced math block:
     md.renderer.rules.fence = (tokens, idx, options, env, slf) => {
+        let code = tokens[idx].content.trim();
+
         if (tokens[idx].info === "katex") {
-            return renderKaTeX(tokens[idx].content);
+            return renderKaTeX(code);
         }
 
         if (tokens[idx].info === "math") {
-            return renderKaTeX(parseAsciiMath(tokens[idx].content, true));
+            code = code.split(/(?:\n\s*){2,}/).map(item => parseAsciiMath(item, true)).join("\n\n");
+
+            return renderKaTeX(parseAsciiMath(code, true));
         }
 
         return feClone(tokens, idx, options, env, slf);

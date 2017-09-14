@@ -1,6 +1,8 @@
 import katex from "katex";
 
-export default function (code, text = "") {
+export default function (code) {
+    let text = "";
+
     // Two or more consecutive new lines mean a new formula
     code.split(/(?:\n\s*){2,}/).forEach((line) => {
         try {

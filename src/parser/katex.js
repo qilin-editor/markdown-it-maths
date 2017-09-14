@@ -8,14 +8,6 @@ function renderToString(code) {
     }
 }
 
-export default function (code, force = false) {
-    if (!force && code.startsWith("katex")) {
-        return renderToString(code.substr(5, code.length - 2));
-    }
-
-    if (force) {
-        return renderToString(code);
-    }
-
-    return code;
+export default function (code) {
+    return renderToString(code.substr(5, code.length - 2));
 }

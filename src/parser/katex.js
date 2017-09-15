@@ -8,6 +8,10 @@ function renderToString(code) {
     }
 }
 
-export default function (code) {
-    return renderToString(code.substr(5, code.length - 2));
+export default function (code, prefix = true) {
+    if (prefix) {
+        return renderToString(code.substr(5, code.length - 2));
+    }
+
+    return renderToString(code);
 }

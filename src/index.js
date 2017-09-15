@@ -17,7 +17,7 @@ export default function (md) {
         }
 
         if (code.startsWith("katex") || code.startsWith("latex")) {
-            code = parseKaTeX(code);
+            return parseKaTeX(code);
         }
 
         return ciClone(tokens, idx, options, env, slf);
@@ -25,16 +25,15 @@ export default function (md) {
 
     // Fenced math block:
     md.renderer.rules.fence = (tokens, idx, options, env, slf) => {
-        let code = tokens[idx].content.trim();
+        const token = tokens[idx];
+        const code = token.content.trim();
 
-        if (tokens[idx].info === "katex" || tokens[idx].info === "latex") {
+        if (token.info === "katex" || token.info === "latex") {
             return renderKaTeX(code);
         }
 
-        if (tokens[idx].info === "math") {
-            code = code.split(/(?:\n\s*){2,}/).map(item => parseAsciiMath(item, false)).join("\n\n");
-
-            return renderKaTeX(code);
+        if (token.info === "math") {
+            return renderKaTeX(code.split(/(?:\n\s*){2,}/).map(l => parseAsciiMath(l, false)).join("\n\n"));
         }
 
         return feClone(tokens, idx, options, env, slf);

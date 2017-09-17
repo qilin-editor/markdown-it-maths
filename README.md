@@ -28,30 +28,40 @@ md.use(require("markdown-it-maths"));
 
 <h2 align="center">Syntax</h2>
 
-- **AsciiMath** inline syntax:
-    ```
-    Lorem ipsum `math a/b + c/d = e/f` dolor stuff.
-    ```
+### Inline:
 
-- **KaTeX** inline syntax:
-    ```
-    Lorem ipsum `katex \frac{a}{b} + \frac{c}{d} = \frac{e}{f}` dolor stuff.
-    ```
+#### **AsciiMath** inline syntax:
 
-- **AsciiMath** block syntax:
-    ```
-     Lorem ipsum dolor stuff:
+```
+Lorem ipsum `math a/b + c/d = e/f` dolor stuff.
+```
 
-     ```math
-     a/b + c/d = e/f
-     ```
-    ```
+#### **KaTeX** inline syntax:
 
-- **KaTeX** block syntax:
-    ```
-     Lorem ipsum dolor stuff:
+```
+Lorem ipsum `katex \frac{a}{b} + \frac{c}{d} = \frac{e}{f}` dolor stuff.
+```
 
-     ```katex
-     \frac{a}{b} + \frac{c}{d} = \frac{e}{f}
-     ```
-    ```
+### Blocks
+
+#### **AsciiMath** block syntax:
+
+````
+Lorem ipsum dolor stuff:
+
+```math
+a/b + c/d = e/f
+```
+````
+
+#### **KaTeX** block syntax:
+
+````
+Lorem ipsum dolor stuff:
+
+```katex
+\frac{a}{b} + \frac{c}{d} = \frac{e}{f}
+```
+````
+
+> **Note:** you can use the keyword `latex` instead of `katex`.

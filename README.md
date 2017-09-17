@@ -40,18 +40,18 @@ md.use(require("markdown-it-maths"));
 
 - **AsciiMath** block syntax:
     ```
-    Lorem ipsum dolor stuff:
+     Lorem ipsum dolor stuff:
 
-    ```math
-    a/b + c/d = e/f
-    ```
+     ```math
+     a/b + c/d = e/f
+     ```
     ```
 
 - **KaTeX** block syntax:
     ```
-    Lorem ipsum dolor stuff:
+     Lorem ipsum dolor stuff:
 
-    ```katex
-    \frac{a}{b} + \frac{c}{d} = \frac{e}{f}
-    ```
+     ```katex
+     \frac{a}{b} + \frac{c}{d} = \frac{e}{f}
+     ```
     ```

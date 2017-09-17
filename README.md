@@ -33,25 +33,25 @@ md.use(require("markdown-it-maths"));
     Lorem ipsum `math a/b + c/d = e/f` dolor stuff.
     ```
 
+- **KaTeX** inline syntax:
+    ```
+    Lorem ipsum `katex \frac{a}{b} + \frac{c}{d} = \frac{e}{f}` dolor stuff.
+    ```
+
 - **AsciiMath** block syntax:
     ```
     Lorem ipsum dolor stuff:
 
-    \`\`\`math
+    ```math
     a/b + c/d = e/f
-    \`\`\`
     ```
-
-- **KaTeX** inline syntax:
-    ```
-    Lorem ipsum `katex \frac{a}{b} + \frac{c}{d} = \frac{e}{f}` dolor stuff.
     ```
 
 - **KaTeX** block syntax:
     ```
     Lorem ipsum dolor stuff:
 
-    \`\`\`katex
-    \\frac{a}{b} + \\frac{c}{d} = \\frac{e}{f}
-    \`\`\`
+    ```katex
+    \frac{a}{b} + \frac{c}{d} = \frac{e}{f}
+    ```
     ```

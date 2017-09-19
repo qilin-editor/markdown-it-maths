@@ -40,9 +40,9 @@
     },
     "scripts": {
         "prepare": "npm run clear && npm run build",
-        "watch": "./node_modules/.bin/webpack --progress --watch",
-        "build": "./node_modules/.bin/webpack --progress",
-        "clear": "rm -rf ./dist"
+        "watch": "node_modules/.bin/webpack --progress --watch",
+        "build": "node_modules/.bin/webpack --progress",
+        "clear": "rm -rf dist"
     },
     "maintainers": [
         {
